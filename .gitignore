@@ -6,6 +6,7 @@
 *.fig
 node_modules
 dist
+.idea
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################
