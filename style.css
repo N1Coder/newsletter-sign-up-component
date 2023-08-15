@@ -5,6 +5,12 @@
 
   /* color */
   --primary-tomato: 4, 100%, 67%;
+  --primary-red: 346, 96%, 65%;
+  --primary-gradient: linear-gradient(
+    60deg,
+    hsl(var(--primary-red)) 5%,
+    hsl(var(--primary-tomato)) 95%
+  );
   --neutral-dark-slate-grey: 234, 29%, 20%;
   --neutral-charcoal-grey: 235, 18%, 26%;
   --neutral-grey: 231, 7%, 60%;
@@ -28,27 +34,30 @@ body {
 }
 
 .main-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  justify-items: flex-end;
+  max-width: 45rem;
   border-radius: 1.5rem;
   background-color: hsla(var(--neutral-white));
+  padding: 1rem 3rem;
+  padding-right: 1rem;
 }
 
 .main-form .main-form__left {
   display: flex;
   flex-direction: column;
-  padding: 4rem 3rem;
 }
 
 .heading .title {
-  font-size: 3.3rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
 }
 
 .heading .sub-title {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   margin-bottom: 1rem;
-  width: 85%;
 }
 
 .lists-benefit {
@@ -57,6 +66,7 @@ body {
   gap: 0.75rem;
   list-style: none;
   margin-bottom: 2rem;
+  font-size: 0.75rem;
 }
 
 .lists-benefit .list {
@@ -68,7 +78,7 @@ body {
   content: url("./public/assets/images/icon-list.svg");
   position: absolute;
   left: 0;
-  top: -1px;
+  top: -3px;
 }
 
 .input-email {
@@ -91,7 +101,7 @@ body {
 }
 
 .input-email button {
-  background-color: hsla(var(--neutral-charcoal-grey));
+  background: hsla(var(--neutral-charcoal-grey));
   color: hsla(var(--neutral-white));
   font-weight: var(--font-bold);
   padding: 1rem;
@@ -100,7 +110,16 @@ body {
   border-radius: 0.5rem;
 }
 
-.main-form__right img {
-  max-width: 20rem;
-  padding-right: 1rem;
+.input-email input:focus-visible {
+  border-width: 2px;
+  border-color: hsla(var(--neutral-charcoal-grey));
+}
+
+.input-email button:hover,
+.input-email button:focus-visible {
+  background: var(--primary-gradient);
+}
+
+img {
+  max-width: 18rem;
 }
