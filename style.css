@@ -116,10 +116,59 @@ body {
 }
 
 .input-email button:hover,
-.input-email button:focus-visible {
+.input-email button:focus-visible,
+.input-email button:active {
   background: var(--primary-gradient);
 }
 
-img {
+.img-mobile {
+  display: none;
+}
+
+img.img-desktop {
   max-width: 18rem;
+}
+
+@media (max-width: 767px) {
+  .img-desktop {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .main-form {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    border-radius: 0;
+    padding: 0;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .main-form .main-form__left {
+    max-width: 85%;
+  }
+
+  .heading .sub-title {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .lists-benefit {
+    list-style: none;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .lists-benefit .list::before {
+    top: 0;
+  }
+
+  .input-email input {
+    margin-bottom: 1.5rem;
+  }
 }
