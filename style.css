@@ -45,9 +45,67 @@ body {
   padding-right: 1rem;
 }
 
+.main-form.hidden {
+  display: none;
+}
+
+.alert-success {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem;
+  gap: 1.5rem;
+  max-width: 23rem;
+  border-radius: 1rem;
+  background-color: hsla(var(--neutral-white));
+}
+
+.alert-title,
+.text-desscription-success {
+  color: hsl(var(--neutral-dark-slate-grey));
+}
+
+.alert-title {
+  font-size: 2.5rem;
+}
+
+.success-icon {
+  width: 18%;
+}
+
+.text-description-success {
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+}
+
+.text-description-success .email-user {
+  font-weight: var(--font-bold);
+}
+
+.button-dismiss {
+  background-color: hsla(var(--neutral-dark-slate-grey));
+  border: none;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: hsla(var(--neutral-white));
+}
+
+.button-dismiss:hover {
+  background: var(--primary-gradient);
+}
+
+.button-dismiss:focus {
+  outline: 2px solid hsla(var(--neutral-charcoal-grey));
+  outline-offset: 0.05rem;
+}
+
 .main-form .main-form__left {
   display: flex;
   flex-direction: column;
+}
+
+.heading {
+  color: hsla(var(--neutral-dark-slate-grey));
 }
 
 .heading .title {
@@ -100,6 +158,12 @@ body {
   outline: none;
 }
 
+.input-email input.error {
+  border-color: hsla(var(--primary-tomato));
+  background-color: hsla(var(--primary-tomato), 0.125);
+  color: hsla(var(--primary-tomato));
+}
+
 .input-email button {
   background: hsla(var(--neutral-charcoal-grey));
   color: hsla(var(--neutral-white));
@@ -108,11 +172,17 @@ body {
   outline: none;
   border: none;
   border-radius: 0.5rem;
+  transition: 100ms;
 }
 
 .input-email input:focus-visible {
   border-width: 2px;
   border-color: hsla(var(--neutral-charcoal-grey));
+}
+
+.input-email button:focus {
+  outline: 2px solid hsla(var(--neutral-charcoal-grey));
+  outline-offset: 0.05rem;
 }
 
 .input-email button:hover,
@@ -150,7 +220,7 @@ img.img-desktop {
   }
 
   .main-form .main-form__left {
-    max-width: 85%;
+    padding-inline: 2rem;
   }
 
   .heading .sub-title {

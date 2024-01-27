@@ -27,9 +27,9 @@
   <body>
     <section class="main-form">
       <img
-        class="img-mobile"
         src="./public/assets/images/illustration-sign-up-mobile.svg"
-        alt="Form Illustration"
+        alt="Signup Mobile Image"
+        class="img-mobile"
       />
 
       <div class="main-form__left">
@@ -49,9 +49,16 @@
 
         <form class="input-email">
           <label for="emailInput"> Email address </label>
-          <input type="text" id="emailInput" placeholder="email@company.com" />
+          <input
+            type="email"
+            id="emailInput"
+            placeholder="email@company.com"
+            required
+          />
 
-          <button type="submit">Subscribe to monthly newsletter</button>
+          <button type="submit" class="button">
+            Subscribe to monthly newsletter
+          </button>
         </form>
       </div>
 
@@ -61,13 +68,5 @@
         alt="Form Illustration"
       />
     </section>
-
-    <!-- Success message start -->
-
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
-
-    <!-- Success message end -->
   </body>
 </html>
